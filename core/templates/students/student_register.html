@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+   <div style="width: 50%;height: 70vh; margin: auto;">
+    <div style="width: 450px; box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35); padding: 20px 20px; border-radius: 10px;">
+        <h1 style="margin-bottom: 50px; text-align: center;">Registration Form</h1>
+ 
+        <form method="post">
+            {% csrf_token %} 
+            {{form.as_p}} 
+            <button type="submit" class="btn btn-primary btn-md mt-3">submit</button>
+        </form>
+    </div>
+   </div>
+{% endblock content %}
+    
+

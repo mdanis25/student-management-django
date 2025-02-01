@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div style="width: 80%; height: 70vh; margin: auto;">
+        <h1>Student Details: </h1>
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Course</th>
+                <th scope="col">Created_at</th>
+                <th scope="col">Updated_at</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody> 
+                    <tr>
+                        <td>{{student.id}}</td>
+                        <td>{{student.name}}</td>
+                        <td>{{student.email}}</td>
+                        <td>{{student.phone}}</td>
+                        <td>{{student.course}}</td>
+                        <td>{{student.created_at}}</td>
+                        <td>{{student.updated_at}}</td>
+                        <td>
+                          <a style="width: 72px;" href="{% url 'update_student' pk=student.id %}" class="btn btn-primary btn-md">Edit</a> 
+                          <a href="{% url 'delete_student' pk=student.id %}" class="btn btn-danger btn-md">Delete</a>
+                        </td>
+                    </tr>
+                 
+            </tbody>
+          </table>
+    </div>
+
+{% endblock content %}
+    
