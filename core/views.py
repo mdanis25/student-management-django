@@ -28,7 +28,7 @@ class StudentCreateView(CreateView):
     success_url = reverse_lazy('student_list')  
     
     def form_valid(self, form): 
-        messages.success(self.request, 'Your submission was successful!')
+        messages.success(self.request, 'Student added successfully!')
         return super().form_valid(form) 
     
     
@@ -39,7 +39,7 @@ class StudentUpdateView(UpdateView):
     success_url = reverse_lazy('student_list') 
     
     def form_valid(self, form):
-        messages.success(self.request, 'Your information has been updated successfully!')
+        messages.success(self.request, 'Student updated successfully!')
         return super().form_valid(form)
     
 class StudentDeleteView(DeleteView): 
@@ -54,5 +54,5 @@ class StudentDeleteView(DeleteView):
         return context
     
     def delete(self, request, *args, **kwargs):
-        messages.success(self.request, 'The student has been deleted successfully!')
+        messages.success(self.request, 'Student record deleted successfully!')
         return super().delete(request, *args, **kwargs)

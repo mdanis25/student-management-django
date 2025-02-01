@@ -1,14 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% if messages %}
-        <div class="alert alert-success">
-            {% for message in messages %}
-                <p>{{ message }}</p>
-            {% endfor %}
-        </div>
-    {% endif %}
-    
+
     <div style="width: 80%; height: 70vh; margin: auto;">
         <h1>Student Lists: </h1>
         <table class="table table-bordered">
